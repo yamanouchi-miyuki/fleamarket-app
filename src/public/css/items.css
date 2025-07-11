@@ -1,0 +1,61 @@
+/* items.css */
+
+/* タブバー全体 */
+.tab-bar {
+    display: flex;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 30px;
+    padding: 0 20px;
+}
+
+.tab-bar a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    margin-right: 30px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid transparent;
+}
+
+.tab-bar a.active {
+    color: red;
+    border-bottom-color: red;
+}
+
+/* 商品一覧 */
+.items-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    padding: 0 30px;
+}
+
+.item-card {
+    width: 200px;
+    text-align: center;
+}
+
+.item-card img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+}
+
+.item-card p {
+    margin: 0;
+    font-size: 14px;
+    color: #333;
+}
+
+@media (max-width: 768px) {
+    .tab-bar {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .items-container {
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    }
+}
