@@ -13,6 +13,5 @@ class CustomRegisterResponse implements RegisterResponseContract
         Auth::logout();
 
         return redirect()->route('login');
-        // return redirect('/mypage/profile');
     }
 }
