@@ -1,0 +1,140 @@
+.purchase-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 60px;
+    margin: 40px auto;
+    max-width: 1200px;
+    padding: 0 5px;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+}
+
+.purchase-left {
+    width: 660px;
+    display: flex;
+    flex-direction: column;
+}
+
+.purchase-right {
+    width: 440px;
+    display: flex;
+    flex-direction: column;
+}
+
+.purchase-image {
+    width: 177.53px;
+    height: 177.53px;
+    background-color: #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.purchase-image img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.purchase-name {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.purchase-price {
+    font-size: 18px;
+    margin-top: 5px;
+}
+
+.purchase-divider {
+    width: 700px;
+    border: none;
+    border-top: 1px solid #aaa;
+    margin: 30px 0;
+}
+
+.purchase-label {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.purchase-select {
+    width: 300px;
+    height: 35px;
+    font-size: 16px;
+}
+
+.purchase-address-text {
+    margin-top: 5px;
+}
+
+.purchase-change {
+    color: #007bff;
+    text-decoration: underline;
+    margin-top: 5px;
+    display: inline-block;
+}
+
+.purchase-right {
+    width: 440px;
+}
+
+.purchase-summary {
+    border: 1px solid #000;
+    width: 100%;
+    height: 230px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.purchase-summary-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.purchase-button {
+    margin-top: 20px;
+    width: 440px;
+    height: 60px;
+    background-color: #f66;
+    color: white;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.error-message {
+    color: red;
+    font-size: 0.9rem;
+    margin-top: 4px;
+}
+
+@media screen and (max-width: 850px) {
+    .purchase-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .purchase-left,
+    .purchase-right {
+        width: 100%;
+    }
+
+    .purchase-summary {
+        height: auto;
+    }
+
+    .purchase-button {
+        width: 100%;
+    }
+
+    .purchase-image {
+        margin: 0 auto 10px;
+    }
+}

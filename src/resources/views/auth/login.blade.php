@@ -1,15 +1,8 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ログイン画面</title>
-    <link rel="stylesheet" href="{{ asset('css/auth.css') }}">
-</head>
-<body class="auth-body">
-    <header class="auth-header">
-        <img src="{{ asset('img/logo.svg') }}" alt="COACHTECH" class="auth-logo-small">
-    </header>
+@extends('layouts.auth')
+
+@section('title', 'ログイン画面')
+
+@section('content')
 
     <main class="auth-main">
         <h2 class="auth-title-short">ログイン</h2>
@@ -38,5 +31,4 @@
             <a href="{{ route('register') }}">会員登録はこちら</a>
         </p>
     </main>
-</body>
-</html>
+@endsection

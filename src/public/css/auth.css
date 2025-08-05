@@ -1,12 +1,12 @@
-共通コンテナ
 .auth-body {
     margin: 0;
     padding: 0;
     font-family: sans-serif;
+    box-sizing: border-box;
 }
 
 .auth-header {
-    width: 1515px;
+    width: 100%;
     height: 82px;
     background-color: black;
     display: flex;
@@ -15,12 +15,14 @@
 }
 
 .auth-logo {
-    width: 370px;
-    height: 36px;
+    width: 250px;
+    height: auto;
+    max-width: 100%;
 }
 
 .auth-main {
-    width: 680px;
+    width: 100%;
+    max-width: 680px;
     height: 678px;
     margin: 50px auto;
     text-align: center;
@@ -47,7 +49,6 @@
     background-color: white;
 }
 
-/* 入力フィールド */
 .auth-input {
     width: 680px;
     height: 58px;
@@ -81,12 +82,10 @@
     text-decoration: none;
 }
 
-/* パスワード確認欄のみ margin-bottom 30px */
 .auth-input:last-of-type {
     margin-bottom: 30px;
 }
 
-/* 登録・ログインボタン */
 .auth-button {
     width: 680px;
     height: 65px;
@@ -130,4 +129,45 @@
     font-size: 16px;
     border: none;
     cursor: pointer;
+}
+
+@media screen and (max-width: 850px) {
+
+    .auth-container,
+    .auth-input,
+    .auth-submit,
+    .auth-button,
+    .auth-input-short,
+    .auth-button-short {
+        width: 100%;
+        padding: 0 16px;
+        box-sizing: border-box;
+    }
+
+    .auth-main {
+        max-width: 100%;
+        padding: 0 16px;
+        height: auto;
+    }
+
+    .auth-container {
+        margin: 20px auto;
+        height: auto;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+
+    .auth-container,
+    .auth-input,
+    .auth-submit,
+    .auth-button,
+    .auth-input-short,
+    .auth-button-short {
+        width: 800px;
+    }
+
+    .auth-main {
+        max-width: 800px;
+    }
 }

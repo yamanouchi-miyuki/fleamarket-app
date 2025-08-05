@@ -1,0 +1,194 @@
+.mypage-container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    font-family: "Ancizar Serif", serif;
+}
+
+.profile-header {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+}
+
+.profile-header-inner {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.user-profile {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.profile-image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.profile-username {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.profile-user-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.user-profile img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.user-name {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+.form-input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    text-align: left;
+}
+
+.edit-profile-button {
+    padding: 10px 16px;
+    border: 1px solid red;
+    background-color: white;
+    color: red;
+    font-weight: bold;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.edit-profile-button:hover {
+    background-color: #F08080;
+    color: #fff;
+}
+
+.tab-menu {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.tab-menu a {
+    padding: 12px 20px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    border-bottom: 2px solid transparent;
+}
+
+.tab-menu a.active {
+    color: red;
+    border-bottom: 2px solid red;
+}
+
+.item-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+}
+
+.item-card {
+    text-align: center;
+    border: 1px solid #eee;
+    border-radius: 6px;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.3s;
+}
+
+.item-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.item-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.item-name {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 850px) {
+    .mypage-container {
+        padding: 10px;
+    }
+
+    .user-profile img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .user-name {
+        font-size: 18px;
+    }
+
+    .form-input {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .edit-button {
+        padding: 6px 16px;
+        font-size: 13px;
+    }
+
+    .item-list {
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    }
+
+    .tab-menu a {
+        font-size: 13px;
+        padding: 8px 16px;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    .mypage-container {
+        max-width: 1100px;
+    }
+
+    .item-list {
+        gap: 30px;
+    }
+
+    .item-card {
+        padding: 15px;
+    }
+
+    .item-name {
+        font-size: 16px;
+    }
+}

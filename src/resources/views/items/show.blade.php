@@ -83,7 +83,7 @@
                 <form action="{{ route('comments.store') }}" method="POST">
                 @csrf
                 <input type="hidden" name="item_id" value="{{ $item->id }}">
-                <textarea name="comment" rows="3" placeholder="商品のコメントを書く..." {{ Auth::check() ? '' : 'disabled' }}>{{ old('comment') }}</textarea>
+                <textarea name="comment" rows="3" placeholder="商品のコメントを書く...">{{ old('comment') }}</textarea>
                 
                 @error('comment')
                     <p class="error">{{ $message }}</p>
@@ -92,7 +92,7 @@
                 @if(Auth::check())
                     <button type="submit" class="submit-comment">コメントを送信する</button>
                 @else
-                    <button type="button" class="submit-comment" disabled>ログインしてください</button>
+                    <button type="button" class="submit-comment" disabled>コメントを送信する</button>
                 @endif
                 </form>
             </div>

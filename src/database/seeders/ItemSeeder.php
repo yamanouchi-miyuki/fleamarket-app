@@ -96,6 +96,8 @@ class ItemSeeder extends Seeder
                     'condition' => $data['condition'],
                     'brand_name' => 'COACHTECH',
                     'user_id' => 1,
+                    'is_published' => 1,
+                    'is_sold' => 0,
                 ]);
 
                 Image::create([

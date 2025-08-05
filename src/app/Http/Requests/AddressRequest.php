@@ -29,4 +29,11 @@ class AddressRequest extends FormRequest
             'address.required' => '住所を入力してください',
         ];
     }
+
+    public function validationData()
+    {
+        return array_merge($this->all(), [
+            'profile_image' => $this->file('profile_image'),
+        ]);
+    }
 }

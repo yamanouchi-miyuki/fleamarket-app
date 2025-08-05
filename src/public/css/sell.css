@@ -1,0 +1,165 @@
+.sell-container {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    font-family: "Ancizar Serif", sans-serif;
+}
+
+.sell-title {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.form-section {
+    margin-bottom: 30px;
+}
+
+.form-label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    margin-top: 20px;
+}
+
+.image-upload input[type="file"] {
+    display: block;
+    margin-top: 12px;
+    width: 100%;
+    padding: 10px;
+}
+
+.detail-section {
+    border-top: 1px solid #ccc;
+    padding-top: 20px;
+}
+
+input.category-checkbox {
+    display: none;
+}
+
+label.category-label {
+    display: inline-block;
+    margin: 6px 8px 6px 0;
+    padding: 6px 14px;
+    border: 1px solid #F08080;
+    border-radius: 20px;
+    background-color: #fff;
+    color: #F08080;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+input.category-checkbox:checked+label.category-label {
+    background-color: #F08080;
+    color: #fff;
+}
+
+.checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.checkbox-label {
+    border: 1px solid #F08080;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    cursor: pointer;
+    background-color: #fff;
+    color: #F08080;
+    user-select: none;
+    transition: all 0.2s ease;
+}
+
+.checkbox-label:hover {
+    background-color: #F08080;
+    color: #fff;
+}
+
+.checkbox-label input[type="checkbox"] {
+    display: none;
+}
+
+.form-select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: #fff;
+    margin-top: 8px;
+}
+
+.form-group {
+    margin-top: 20px;
+}
+
+.form-input,
+.form-textarea,
+.form-select {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+.form-textarea {
+    resize: vertical;
+}
+
+.submit-btn {
+    display: block;
+    width: 100%;
+    background-color: #F08080;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 12px 0;
+    margin-top: 30px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.submit-btn:hover {
+    background-color: #e05555;
+}
+
+.checkbox-group input[type="checkbox"]:checked+.checkbox-label {
+    background-color: #F08080;
+    color: #fff;
+    border-color: #F08080;
+}
+
+@media screen and (max-width: 850px) {
+    .sell-container {
+        padding: 30px 16px;
+    }
+
+    .sell-title {
+        font-size: 22px;
+    }
+
+    .form-label {
+        font-size: 15px;
+    }
+
+    .form-input,
+    .form-textarea,
+    .form-select {
+        font-size: 13.5px;
+    }
+
+    .checkbox-label {
+        font-size: 13px;
+        padding: 6px 12px;
+    }
+}

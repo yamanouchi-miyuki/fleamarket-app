@@ -1,21 +1,9 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=1515">
-    <title>会員登録画面</title>
-    <link rel="stylesheet" href="{{ asset('css/auth.css') }}">
-</head>
-<body class="auth-body">
+@extends('layouts.auth')
 
-    {{-- ヘッダー --}}
-    <header class="auth-header">
-        <img src="{{ asset('img/logo.svg') }}" alt="COACHTECH" class="auth-logo">
-    </header>
+@section('title', '会員登録画面')
 
-    {{-- メインコンテンツ --}}
-    <main class="auth-main">
-        <h2 class="auth-title">会員登録</h2>
+@section('content')
+    <h2 class="auth-title">会員登録</h2>
 
         {{-- エラーメッセージ --}}
         @if ($errors->any())
@@ -46,6 +34,4 @@
         <p class="auth-link">
             <a href="{{ route('login') }}">ログインはこちら</a>
         </p>
-    </main>
-</body>
-</html>
+@endsection    

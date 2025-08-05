@@ -24,4 +24,20 @@ class ExhibitionRequest extends FormRequest
             'price'        => ['required', 'numeric', 'min:0'],
         ];
     }
+
+    public function messages()
+    {
+        return [
+            'name.required' => '入力必須項目です',
+            'description.required' => '入力必須項目です',
+            'description.max' => '255字以内で入力してください',
+            'image.required' => 'アップロード必須です',
+            'image.mimes' => '拡張子は.jpegもしくは.pngでお願いします',
+            'category_ids.required' => '選択必須項目です',
+            'condition.required' => '選択必須項目です',
+            'price.required' => '入力必須項目です',
+            'price.numeric' => '数値でお願いします',
+            'price.min' => '0円以上でお願いします',
+    ];
+    }
 }

@@ -1,0 +1,61 @@
+.address-wrapper {
+    max-width: 680px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.address-title {
+    font-size: 24px;
+    margin-bottom: 40px;
+}
+
+.address-label {
+    display: block;
+    width: 205px;
+    height: 36px;
+    font-size: 20px;
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+.address-input {
+    width: 680px;
+    height: 45px;
+    padding: 8px;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.address-button {
+    width: 680px;
+    height: 60px;
+    background-color: #f75b5b;
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+@media screen and (max-width: 850px) {
+    .address-wrapper {
+        padding: 0 16px;
+    }
+
+    .address-input,
+    .address-button {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    .address-wrapper {
+        max-width: 800px;
+        margin: 50px auto;
+    }
+
+    .address-input,
+    .address-button {
+        width: 800px;
+    }
+}

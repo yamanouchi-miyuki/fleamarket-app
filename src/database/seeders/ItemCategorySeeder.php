@@ -9,6 +9,10 @@ class ItemCategorySeeder extends Seeder
 {
     public function run()
     {
+        DB::statement('SET FOREIGN_KEY_CHECKS=0;');
+        DB::table('item_categories')->truncate();
+        DB::statement('SET FOREIGN_KEY_CHECKS=1;');
+        
         $data = [
             ['item_id' => 1, 'category_id' => 1],
             ['item_id' => 1, 'category_id' => 5],

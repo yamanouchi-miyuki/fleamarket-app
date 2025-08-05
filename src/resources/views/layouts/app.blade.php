@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="{{ asset('css/common.css') }}">
     <link rel="stylesheet" href="{{ asset('css/items.css') }}">
     <link rel="stylesheet" href="{{ asset('css/items-show.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/sell.css') }}">
+    @stack('styles')
+    @yield('css')
 </head>
 <body>
     <header class="common-header">
@@ -16,8 +20,8 @@
         </a>
 
         {{-- 検索バー --}}
-        <form action="#" method="GET" class="common-search-form">
-            <input type="text" name="keyword" placeholder="なにをお探しですか？" class="common-search-input">
+        <form action="{{ url('/') }}" method="GET" class="common-search-form">
+            <input type="text" name="keyword" value="{{ request('keyword') }}" placeholder="なにをお探しですか？" class="common-search-input">
         </form>
 
         {{-- ナビゲーション --}}
@@ -28,7 +32,7 @@
                     @csrf
                     <button type="submit" class="common-logout-button">ログアウト</button>
                 </form>
-                <a href="{{ url('/mypage') }}" class="common-link">マイページ</a>
+                <a href="{{ route('mypage') }}" class="common-link">マイページ</a>
             @else
                 <a href="{{ route('login') }}" class="common-link">ログイン</a>
             @endauth

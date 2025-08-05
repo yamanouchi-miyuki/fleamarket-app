@@ -1,4 +1,3 @@
-/* フォント設定（Google Fonts を読み込んでいる場合に合わせて調整） */
 body {
     font-family: 'Ancizar Serif', sans-serif;
     margin: 0;
@@ -7,7 +6,6 @@ body {
     color: #000;
 }
 
-/* 共通ヘッダー */
 header {
     height: 47px;
     background: #000;
@@ -18,18 +16,11 @@ header {
     padding: 0 24px;
 }
 
-/* ロゴ */
-.logo {
-    height: 24px;
-}
-
-/* 検索ボックス */
 .search-box {
     width: 300px;
     padding: 5px;
 }
 
-/* メニューナビゲーション */
 .menu a {
     color: white;
     margin-left: 20px;
@@ -37,7 +28,6 @@ header {
     font-size: 14px;
 }
 
-/* 出品ボタン */
 .sell-button {
     background-color: white;
     color: black;
@@ -48,7 +38,6 @@ header {
     cursor: pointer;
 }
 
-/* 共通ボタン */
 .button-red {
     background-color: #f66;
     color: white;
@@ -64,7 +53,6 @@ header {
     background-color: #e55;
 }
 
-/* 入力フォーム（共通） */
 input[type="text"],
 input[type="email"],
 input[type="password"],
@@ -78,28 +66,24 @@ textarea {
     box-sizing: border-box;
 }
 
-/* ラベル（フォーム名） */
 label {
     display: block;
     margin-bottom: 6px;
     font-size: 14px;
 }
 
-/* エラーメッセージ */
 .error-message {
     color: red;
     font-size: 12px;
     margin-top: 4px;
 }
 
-/* レスポンシブ基礎レイアウト用 */
 .container {
     max-width: 960px;
     margin: 0 auto;
-    padding: 16px;
+    padding: 20px;
 }
 
-/* タブ切り替え（例：おすすめ / マイリスト） */
 .tab-bar {
     height: 47px;
     border-bottom: 1px solid #ccc;
@@ -174,6 +158,40 @@ label {
     font-size: 14px;
 }
 
-.common-main {
-    padding: 20px;
+@media screen and (max-width: 850px) {
+    header,
+    .common-header {
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto;
+        padding: 10px;
+    }
+    .logo,
+    .common-logo {
+        margin-bottom: 10px;
+    }
+    .search-box,
+    .common-search-input {
+        width: 100%;
+    }
+    .common-navigation {
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 10px;
+    }
+    .tab-bar {
+        flex-wrap: wrap;
+        gap: 10px;
+        padding-left: 10px;
+        height: auto;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    .container {
+        max-width: 1200px;
+    }
+    .search-box {
+        width: 400px;
+    }
 }

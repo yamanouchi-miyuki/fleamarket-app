@@ -23,15 +23,16 @@ use Laravel\Fortify\Fortify;
 use Laravel\Fortify\Contracts\RegisterResponse;
 use App\Http\Responses\CustomRegisterResponse;
 use App\Http\Controllers\Auth\RegisteredUserController;
+use Laravel\Fortify\Contracts\LoginResponse;
+use App\Http\Responses\CustomLoginResponse;
 
 class FortifyServiceProvider extends ServiceProvider
 {
-    /**
-     * Register any application services.
-     */
+    
     public function register(): void
     {
         $this->app->singleton(RegisterResponse::class, CustomRegisterResponse::class);
+        
     }
 
     public function boot(): void
@@ -55,10 +56,18 @@ class FortifyServiceProvider extends ServiceProvider
             return view('auth.login');
         });
 
+        Fortify::registerView(function () {
+            return view('auth.register');
+        });
+
         $this->app->bind(
             FortifyRegisterRequest::class, RegisterRequest::class);
 
         $this->app->bind(FortifyLoginRequest::class, LoginRequest::class);
+
+        $this->app->singleton(LoginResponse::class, CustomLoginResponse::class);
+
+        $this->app->singleton(RegisterResponse::class, CustomRegisterResponse::class);
 
     }
 }

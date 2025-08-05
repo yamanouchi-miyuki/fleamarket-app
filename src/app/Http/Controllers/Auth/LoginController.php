@@ -19,4 +19,12 @@ class LoginController extends Controller
         }
         return redirect()->intended('/');
     }
+
+    public function authenticated(Request $request, $user){
+        if (!$user->is_profile_registered) {
+            return redirect('/mypage/profile');
+        }
+        
+        return redirect('/');
+    }
 }

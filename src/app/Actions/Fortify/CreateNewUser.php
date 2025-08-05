@@ -21,6 +21,10 @@ class CreateNewUser implements CreatesNewUsers
         //     'password' => $this->passwordRules(),
         // ])->validate();
 
+        // app(RegisterRequest::class)->merge($input)->validate();
+
+        Validator::make($input, (new RegisterRequest())->rules(), (new RegisterRequest())->messages())->validate();
+        
         return User::create([
             'name' => $input['name'],
             'email' => $input['email'],
